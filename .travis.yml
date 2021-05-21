@@ -1,0 +1,13 @@
+language: cpp
+compiler:
+  - clang
+before_script:
+  - mkdir ../build
+  - cd ../build
+script:
+  - cmake ../Lab15_Map
+  - make -j
+  - cd ./test
+  - ./MP15_TreeMap_Test
+notifications:
+  email: false
